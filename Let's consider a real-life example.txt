@@ -1,0 +1,305 @@
+Let's consider a real-life example related to customer purchases at a store and incorporate all the statistical concepts you've mentioned.
+
+Scenario: A Small Coffee Shop Analyzing Customer Behavior
+A small coffee shop wants to analyze its daily sales and customer behavior using probability and statistics.
+
+1. Probability Mass Function (PMF)
+The PMF describes the probability of a discrete random variable taking specific values. Suppose the number of coffees a customer buys follows this PMF:
+
+P(X = x) = \begin{cases} 0.4, & x = 1 \text{ (40% buy 1 coffee)}\\ 0.3, & x = 2 \text{ (30% buy 2 coffees)}\\ 0.2, & x = 3 \text{ (20% buy 3 coffees)}\\ 0.1, & x = 4 \text{ (10% buy 4 coffees)} \end{cases}
+This PMF gives the probability of customers buying 1, 2, 3, or 4 coffees.
+
+2. Cumulative Distribution Function (CDF)
+The CDF gives the probability that a customer buys at most a certain number of coffees:
+
+𝐹
+(
+𝑋
+)
+=
+𝑃
+(
+𝑋
+≤
+𝑥
+)
+F(X)=P(X≤x)
+For our example:
+
+𝑃
+(
+𝑋
+≤
+1
+)
+=
+0.4
+P(X≤1)=0.4 (40% buy at most 1 coffee)
+𝑃
+(
+𝑋
+≤
+2
+)
+=
+0.4
++
+0.3
+=
+0.7
+P(X≤2)=0.4+0.3=0.7 (70% buy at most 2 coffees)
+𝑃
+(
+𝑋
+≤
+3
+)
+=
+0.7
++
+0.2
+=
+0.9
+P(X≤3)=0.7+0.2=0.9 (90% buy at most 3 coffees)
+𝑃
+(
+𝑋
+≤
+4
+)
+=
+1
+P(X≤4)=1 (100% buy at most 4 coffees)
+The CDF shows how probabilities accumulate.
+
+3. Probability Density Function (PDF)
+Since PDF applies to continuous data (e.g., height, weight, or time), we can use it for the time customers spend in the shop.
+
+If the time a customer stays follows a normal distribution, the PDF is given by:
+
+𝑓
+(
+𝑥
+)
+=
+1
+𝜎
+2
+𝜋
+𝑒
+−
+(
+𝑥
+−
+𝜇
+)
+2
+2
+𝜎
+2
+f(x)= 
+σ 
+2π
+​
+ 
+1
+​
+ e 
+− 
+2σ 
+2
+ 
+(x−μ) 
+2
+ 
+​
+ 
+ 
+where:
+
+𝜇
+=
+30
+μ=30 minutes (average time spent),
+𝜎
+=
+5
+σ=5 minutes (standard deviation).
+The PDF describes the likelihood of a customer staying a specific number of minutes.
+
+4. Bernoulli's Distribution
+Each customer either buys a pastry (success = 1) or does not (failure = 0). This follows a Bernoulli distribution with probability 
+𝑝
+p.
+
+If 60% of customers buy a pastry:
+
+𝑃
+(
+𝑋
+=
+1
+)
+=
+0.6
+,
+𝑃
+(
+𝑋
+=
+0
+)
+=
+0.4
+P(X=1)=0.6,P(X=0)=0.4
+Each customer’s choice is an independent Bernoulli trial.
+
+5. Binomial Distribution
+Now, let’s say the coffee shop gets 10 customers per hour, and we want to find the probability that exactly 7 customers buy a pastry.
+
+Since each customer follows a Bernoulli process, the total number of customers buying a pastry follows a Binomial distribution:
+
+𝑃
+(
+𝑋
+=
+𝑘
+)
+=
+(
+𝑛
+𝑘
+)
+𝑝
+𝑘
+(
+1
+−
+𝑝
+)
+𝑛
+−
+𝑘
+P(X=k)=( 
+k
+n
+​
+ )p 
+k
+ (1−p) 
+n−k
+ 
+where:
+
+𝑛
+=
+10
+n=10 (total customers),
+𝑘
+=
+7
+k=7 (customers buying pastries),
+𝑝
+=
+0.6
+p=0.6 (probability of buying a pastry).
+𝑃
+(
+𝑋
+=
+7
+)
+=
+(
+10
+7
+)
+(
+0.6
+)
+7
+(
+0.4
+)
+3
+P(X=7)=( 
+7
+10
+​
+ )(0.6) 
+7
+ (0.4) 
+3
+ 
+This tells us how likely it is that 7 out of 10 customers buy pastries.
+
+6. Normal Distribution
+The daily revenue follows a normal distribution with an average 
+𝜇
+=
+500
+μ=500 dollars and a standard deviation 
+𝜎
+=
+50
+σ=50 dollars.
+
+𝑋
+∼
+𝑁
+(
+500
+,
+50
+2
+)
+X∼N(500,50 
+2
+ )
+Using this, we can estimate:
+
+The probability of making more than $550 in a day.
+The probability of making between $450 and $550.
+A Z-score transformation helps calculate these probabilities.
+
+7. Linear Equation
+The shop notices that the revenue 
+𝑅
+R depends on the number of customers 
+𝐶
+C as:
+
+𝑅
+=
+5
+𝐶
++
+50
+R=5C+50
+where:
+
+Each customer spends an average of $5.
+The shop has a fixed daily income of $50 from pre-orders.
+This is a linear equation predicting revenue based on customer count.
+
+8. Correlation
+The shop analyzes two variables:
+
+Temperature (°F)
+Number of iced coffee sales
+It finds a strong positive correlation (
+𝑟
+=
+0.8
+r=0.8), meaning as temperature increases, iced coffee sales also increase.
+
+Summary Table
+Concept	Example in Coffee Shop
+PMF	Probability of buying 1, 2, 3, or 4 coffees
+CDF	Probability of buying at most a certain number of coffees
+PDF	Probability of a customer staying a specific time (normally distributed)
+Bernoulli	Buying a pastry (Yes/No)
+Binomial	Number of customers buying pastries out of 10
+Normal	Daily revenue follows a normal distribution
+Linear Equation	Relationship between revenue and customers
+Correlation	Iced coffee sales increase as temperature rises
